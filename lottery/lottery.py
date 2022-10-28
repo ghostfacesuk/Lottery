@@ -26,8 +26,6 @@ while luckyball >= 1:
         luckyball -= 1
 
 
-print("Lucky numbers: ")
-print(*numlist, sep=', ')
-print("Lucky stars:")
-print(*luckynum, sep=', ')
+print("Lucky numbers:", *numlist)
+print("Lucky stars:", *luckynum)
 print("\n")
