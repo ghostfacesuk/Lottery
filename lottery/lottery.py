@@ -1,32 +1,33 @@
 import random
 
-num0 = []
+numlist = []
+luckynum = []
 
 mainball = 5
 luckyball = 2
-mainpos = 0
 retry = 0
 
 while mainball >= 1:
     randball = random.randint(1, 50)
-    if randball in num0:
+    if randball in numlist:
         retry += 0
     #    print("match, guessing again")
     else:
-        num0.append(randball)
-        mainpos += 1
+        numlist.append(randball)
         mainball -= 1
 
 while luckyball >= 1:
     randball = random.randint(1, 12)
-    if randball in num0:
+    if randball in luckynum:
         retry += 0
    #     print("match, guessing again")
     else:
-        num0.append(randball)
-        mainpos += 1
+        luckynum.append(randball)
         luckyball -= 1
 
-print("Your lucky numbers are... ")
-print(*num0, sep=', ')
-print(" \n")
+
+print("Lucky numbers: ")
+print(*numlist, sep=', ')
+print("Lucky stars:")
+print(*luckynum, sep=', ')
+print("\n")
